@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-//import { Playpen_Sans } from "next/font/google";
 import "./globals.css";
-/*
-const playpenSans = Playpen_Sans({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});**/
+
 
 export const metadata: Metadata = {
   title: "Create Next App",

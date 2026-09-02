@@ -2,6 +2,16 @@
 
 import { useState, useEffect } from "react";
 import Navigation from "./Navigation";
+import './styles/Flashcard.css';
+
+interface FlashcardProps {
+  question: string;
+  answer: string;
+  onPrevious: () => void;
+  onNext: () => void;
+  hasPrevious: boolean;
+  hasNext: boolean;
+}
 
 interface FlashcardProps {
   question: string;
@@ -22,15 +32,15 @@ export default function Flashcard({
 }: FlashcardProps) {
   const [showAnswer, setShowAnswer] = useState(false);
 
-  // sempre que o card mudar (pergunta diferente), esconde a resposta de novo
+  
   useEffect(() => {
     setShowAnswer(false);
   }, [question]);
 
   return (
-    <div className="border border-gray-300 rounded-xl p-8">
-      <div className="min-h-[220px] flex items-center justify-center text-center">
-        <p className="text-xl font-bold text-gray-900 leading-relaxed">
+    <div className="flashcard">
+      <div className="flashcard-content">
+        <p className="flashcard-text">
           {showAnswer ? answer : question}
         </p>
       </div>
@@ -43,7 +53,7 @@ export default function Flashcard({
         middle={
           <button
             onClick={() => setShowAnswer((prev) => !prev)}
-            className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+            className="answer-button"
           >
             {showAnswer ? "Hide Answer" : "Show Answer"}
           </button>

@@ -1,0 +1,47 @@
+.c1{
+    display: flex; 
+    align-items: center; 
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.c2{
+    flex: 1; 
+    display: flex; 
+    align-items: center;
+    gap: 0.5rem; 
+    border: 1px solid #f881ad;
+    border-radius: 9999px;
+    padding: 0.25rem;
+}
+.c3{
+    flex: 1;
+    height: 0.75rem;
+    background-color: #ffd6e5;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+.bar{
+    height: 100%;
+    background-color: #e83e78;
+    border-radius: 9999px;
+    transition: width 300ms ease;
+}
+.barra-porcentagem{
+  padding-right: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e83e78;
+}
+
+.total-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  border: 1px solid #ffa2c4;
+  border-radius: 9999px;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e83e78;
+}
